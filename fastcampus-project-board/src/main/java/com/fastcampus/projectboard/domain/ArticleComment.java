@@ -20,7 +20,7 @@ import java.util.Objects;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
-public class ArticleComment {
+public class ArticleComment extends AuditingFields{
     @Id
     private Long id;
     @Setter @ManyToOne(optional = false) private Article article;
