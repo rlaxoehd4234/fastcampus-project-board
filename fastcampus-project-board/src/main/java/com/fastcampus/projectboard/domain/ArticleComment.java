@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 package com.fastcampus.projectboard.domain;
 
 import lombok.Getter;
@@ -20,7 +24,11 @@ import java.util.Objects;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
+<<<<<<< Updated upstream
 public class ArticleComment extends AuditingFields{
+=======
+public class ArticleComment {
+>>>>>>> Stashed changes
     @Id
     private Long id;
     @Setter @ManyToOne(optional = false) private Article article;
@@ -55,5 +63,11 @@ public class ArticleComment extends AuditingFields{
     public int hashCode() {
         return Objects.hash(id);
     }
+<<<<<<< Updated upstream
 
+=======
+=======
+package com.fastcampus.projectboard.domain;public class ArticleComment {
+>>>>>>> main
+>>>>>>> Stashed changes
 }

@@ -31,6 +31,22 @@ spring:
       enabled:  false
   sql.init.mode: always
 
+<<<<<<< Updated upstream
+=======
+---
+
+spring:
+  config:
+    activate:
+      on-profile: testdb
+  datasource:
+    url: jdbc:g2:mem:board;mode=mysql
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      mode: always
+
+>>>>>>> Stashed changes
 
 
 

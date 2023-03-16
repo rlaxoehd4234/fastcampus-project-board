@@ -7,7 +7,10 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+<<<<<<< Updated upstream
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+=======
+>>>>>>> Stashed changes
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -25,7 +28,11 @@ import java.util.Set;
         @Index(columnList = "createdBy"),
 }
 )
+<<<<<<< Updated upstream
 public class Article extends AuditingFields{
+=======
+public class Article {
+>>>>>>> Stashed changes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,9 +43,18 @@ public class Article extends AuditingFields{
     @ToString.Exclude
     @OrderBy("id")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+<<<<<<< Updated upstream
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
 
+=======
+    private final Set<ArticleComment.ArticleComment> articleComments = new LinkedHashSet<>();
+
+    @CreatedDate @Column(nullable = false) private LocalDateTime createdAt;
+    @CreatedBy @Column(nullable = false , length = 100)private String createdBy;
+    @LastModifiedDate @Column(nullable = false) private LocalDateTime modifiedAt;
+    @LastModifiedBy @Column(nullable = false) private String modifiedBy;
+>>>>>>> Stashed changes
 
     protected Article(){}
 

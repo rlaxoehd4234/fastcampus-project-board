@@ -41,6 +41,7 @@ class JpaRepositoryTest {
         //then
         assertThat(articles).isNotNull().hasSize(0);
     }
+<<<<<<< Updated upstream
 
     @DisplayName("update Test")
     @Test
@@ -55,3 +56,6 @@ class JpaRepositoryTest {
 
 }
 }
+=======
+}
+>>>>>>> Stashed changes
