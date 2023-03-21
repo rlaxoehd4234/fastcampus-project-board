@@ -10,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -45,6 +46,20 @@ class ArticleServiceTest {
         ArticleDto articles = sut.searchArticle(1L);
 
         assertThat(articles).isNotNull();
+    }
+
+    @DisplayName("게시글 정보를 입력하면, 게시들을 생성한다.")
+    @Test
+    void givenArticleInfo_whenSavingArticle_thenSavesArticle(){
+        //Given
+        ArticleDto dto = new ArticleDto("test","test","test","test",LocalDateTime.now());
+
+
+
+        //When
+
+
+        //Then
     }
 
 }
