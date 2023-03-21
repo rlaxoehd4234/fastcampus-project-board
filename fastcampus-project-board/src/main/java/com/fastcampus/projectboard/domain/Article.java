@@ -1,5 +1,6 @@
 package com.fastcampus.projectboard.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -51,6 +52,8 @@ public class Article extends AuditingFields{
     public static Article of(String title, String content, String hashtag){
         return new Article(title,content,hashtag);
     }
+
+
 
     @Override  // 동등성 비교
     public boolean equals(Object o) {
